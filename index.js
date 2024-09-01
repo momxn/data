@@ -1,1 +1,4 @@
-const aaa = "dsgdsgds";
+[
+    {"id": 1, "name": "علی"},
+    {"id": 2, "name": "حسین"}
+]
