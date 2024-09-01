@@ -1,10 +1,17 @@
-<?php
-// خواندن داده‌های JSON از فایل
-$json_data = file_get_contents('data.json');
+<?php 
+// تعریف داده‌های JSON به صورت آرایه انجمنی
+$userData = [
+    "name" => "علی",
+    "email" => "ali@example.com",
+    "address" => [
+        "street" => "خیابان ولیعصر",
+        "city" => "تهران"
+    ]
+];
 
-// تبدیل JSON به آرایه PHP
-$data = json_decode($json_data, true);
+// تبدیل آرایه به JSON
+$jsonData = json_encode($userData, JSON_PRETTY_PRINT);
 
-// ارسال پاسخ به صورت JSON
-header('Content-Type: application/json');
-echo json_encode($data);
+// نمایش خروجی
+echo $jsonData;
+?>
